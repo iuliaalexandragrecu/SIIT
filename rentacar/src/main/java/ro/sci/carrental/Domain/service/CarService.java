@@ -9,6 +9,14 @@ import java.util.List;
  */
 public interface CarService {
     /**
+     * Find all cars in the system
+     * @param cars
+     * @return List<Car>
+     */
+
+    List<Car> findAll (Car cars);
+
+    /**
      * Find the same make car in the system
      * @param make car make
      * @return List<car>

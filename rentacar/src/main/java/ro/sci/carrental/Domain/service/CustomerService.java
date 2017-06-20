@@ -9,6 +9,14 @@ import java.util.List;
  */
 public interface CustomerService {
     /**
+     * Find all customers
+     * @param customers
+     * @return List <Customer>
+     */
+
+    List<Customer> findAll (Customer custumers);
+
+    /**
      * Find customers by last name.
      * @param lastName
      * @return List</Customer>

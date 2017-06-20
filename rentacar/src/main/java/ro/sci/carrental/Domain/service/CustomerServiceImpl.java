@@ -18,6 +18,8 @@ public class CustomerServiceImpl implements CustomerService {
         this.customerRepository = customerRepository;
     }
 
+    public List<Customer> findAll(Customer custumers) {return null;}
+
     public List<Customer> findCustomerByLastName(String lastName) {
         List<Customer> foundCustomers = new ArrayList<Customer>();
 

@@ -20,6 +20,8 @@ public class CarServiceImpl implements CarService {
     }
 
 
+    public List<Car> findAll(Car cars) {return null;}
+
     public List<Car> findCarsByMake(String make) {
         List<Car> foundCars = new ArrayList<Car>();
 
