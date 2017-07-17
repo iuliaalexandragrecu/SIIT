@@ -15,40 +15,43 @@ import java.util.List;
  * repository interface for car, this will help managing all persistence operations related to car.
  *
  */
-public interface CarRepository {
+public interface CarRepository<Car> {
     /**
      * Get All cars in the system
-     * @return List<car>
+     * @return List<Car>
      */
     List<Car> getAll();
     /**
      * Return cars of a certain maker
      * @param make
-     * @return List<car>
+     * @return List<Car>
      */
     List<Car> getCarsByMake (String make);
 
     /**
      * Return cars by model
      * @param model
-     * @return List<car>
+     * @return List<Car>
      */
     List<Car> getCarsByModel (String model);
 
     /**
      * Return cars by fuel type
      * @param fueltype
-     * @return List</car>
+     * @return List<Car>
      */
     List<Car> getCarsByFuelType (FuelType fueltype);
 
+    /**
+     * Add a car in the system
+     * @param car
+     */
     void add (Car car);
 
     /**
      * Add all cars in the system
-     * @param car
+     * @param cars
      */
-
     void addAll (List<Car> cars);
 
     /**

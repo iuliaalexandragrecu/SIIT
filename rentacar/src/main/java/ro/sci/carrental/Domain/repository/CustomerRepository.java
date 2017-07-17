@@ -12,7 +12,7 @@ import java.util.List;
  * repository interface for Customer, this will help managing all persistence operations related to Customer.
  *
  */
-public interface CustomerRepository {
+public interface CustomerRepository<Customer> {
     /**
      * Get all Customer in the system
      * @return List<Customer>
@@ -21,7 +21,7 @@ public interface CustomerRepository {
 
     /**
      * Return customers by ID
-     * @return List</Customer>
+     * @return List<Customer>
      */
     List<Customer> getCustomerByID ();
 
@@ -46,7 +46,6 @@ public interface CustomerRepository {
     /**
      * Add all customers in the system
      */
-
     void addAll (List<Customer> customers);
 
     /**

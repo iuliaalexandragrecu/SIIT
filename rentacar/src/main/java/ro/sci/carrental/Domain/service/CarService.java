@@ -7,19 +7,18 @@ import java.util.List;
 /**
  * Created by iulia on 5/29/2017.
  */
-public interface CarService {
+public interface CarService<Car> {
     /**
      * Find all cars in the system
      * @param cars
      * @return List<Car>
      */
-
     List<Car> findAll (Car cars);
 
     /**
      * Find the same make car in the system
      * @param make car make
-     * @return List<car>
+     * @return List<Car>
      */
     List<Car> findCarsByMake (String make);
 
@@ -27,7 +26,7 @@ public interface CarService {
      * Find the same make and model in the system
      * @param make car make
      * @param model car model
-     * @return List<car>
+     * @return List<Car>
      */
     List<Car> findCarsByMakeAndModel (String make, String model);
 

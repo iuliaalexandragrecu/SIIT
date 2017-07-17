@@ -12,7 +12,7 @@ import java.util.List;
  * Created by iulia on 5/21/2017.
  */
 
-public class CarRepositoryImpl implements CarRepository{
+public class CarRepositoryImpl implements CarRepository<Car>{
 
     private List<Car> cars = new ArrayList<Car>();
 

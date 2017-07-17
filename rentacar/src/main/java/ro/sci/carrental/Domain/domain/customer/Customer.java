@@ -14,8 +14,7 @@ public class Customer {
     private PaymentMethod paymentMethod;
 
 
-    public Customer(int ID, String lastName, String phone) {
-        this.ID = ID;
+    public Customer(String lastName, String phone) {
         this.lastName = lastName;
         this.phone = phone;
     }
