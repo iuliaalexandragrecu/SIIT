@@ -1,4 +1,4 @@
-package ro.sci.carrental.Domain.domain.customer;
+package ro.sci.carrental.Domain.domain.Payment;
 
 /**
  * Created by iulia on 6/20/2017.

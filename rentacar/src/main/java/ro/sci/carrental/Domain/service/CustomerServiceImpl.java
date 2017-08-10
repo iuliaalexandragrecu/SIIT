@@ -54,6 +54,9 @@ public class CustomerServiceImpl implements CustomerService<Customer> {
 
         return foundCustomers;
     }
+
+    public CustomerRepositoryImpl getCustomerRepository(){return customerRepository; }
 }
+
 
 

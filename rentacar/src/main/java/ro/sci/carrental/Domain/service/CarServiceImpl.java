@@ -62,5 +62,5 @@ public class CarServiceImpl implements CarService<Car> {
     public CarRepositoryImpl getCarRepository() {
         return carRepository;
     }
-    }
+}
 

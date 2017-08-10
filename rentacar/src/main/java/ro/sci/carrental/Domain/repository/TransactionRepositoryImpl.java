@@ -1,8 +1,7 @@
 package ro.sci.carrental.Domain.repository;
 
-import ro.sci.carrental.Domain.domain.customer.Transaction;
+import ro.sci.carrental.Domain.domain.Payment.Transaction;
 
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
