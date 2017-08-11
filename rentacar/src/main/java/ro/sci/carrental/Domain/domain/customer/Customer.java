@@ -15,7 +15,7 @@ public class Customer {
     private CustomerAddress customerAddress ;
     private PaymentMethod paymentMethod;
 
-    public Customer(String lastName, String phone) {
+    public Customer() {
         this.lastName = lastName;
         this.phone = phone;
     }
