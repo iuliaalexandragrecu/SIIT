@@ -1,7 +1,7 @@
 package ro.sci.carrental.Domain.domain;
 
 import org.junit.Test;
-import ro.sci.carrental.Domain.domain.Payment.Price;
+import ro.sci.carrental.Domain.domain.payment.Price;
 
 import static org.junit.Assert.assertEquals;
 

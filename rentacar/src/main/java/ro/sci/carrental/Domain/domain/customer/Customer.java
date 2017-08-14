@@ -1,6 +1,6 @@
 package ro.sci.carrental.Domain.domain.customer;
 
-import ro.sci.carrental.Domain.domain.Payment.PaymentMethod;
+import ro.sci.carrental.Domain.domain.payment.PaymentMethod;
 
 /**
  * Created by iulia on 5/28/2017.

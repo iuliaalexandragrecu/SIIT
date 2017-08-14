@@ -1,6 +1,6 @@
 package ro.sci.carrental.Domain.service;
 
-import ro.sci.carrental.Domain.domain.Payment.Transaction;
+import ro.sci.carrental.Domain.domain.payment.Transaction;
 
 import java.util.List;
 

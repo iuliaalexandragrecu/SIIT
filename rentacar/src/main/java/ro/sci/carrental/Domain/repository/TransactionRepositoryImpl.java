@@ -1,6 +1,6 @@
 package ro.sci.carrental.Domain.repository;
 
-import ro.sci.carrental.Domain.domain.Payment.Transaction;
+import ro.sci.carrental.Domain.domain.payment.Transaction;
 
 import java.util.ArrayList;
 import java.util.List;

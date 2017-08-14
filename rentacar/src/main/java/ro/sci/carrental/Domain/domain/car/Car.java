@@ -61,7 +61,7 @@ public class Car{
         public VehicleCategory getVehicleCategory() {return vehicleCategory;}
         public void setVehicleCategory (VehicleCategory vehicleCategory) {this.vehicleCategory = vehicleCategory;}
 
-        public boolean isOnLoan () {return onLoan;}
+        public boolean isOnLoan(boolean b) {return onLoan;}
         public void setOnLoan (boolean onLoan) {this.onLoan = onLoan;}
     }
 
