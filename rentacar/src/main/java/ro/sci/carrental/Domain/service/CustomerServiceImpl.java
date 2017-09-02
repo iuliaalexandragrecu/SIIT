@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Created by iulia on 5/29/2017.
  */
-public class CustomerServiceImpl implements CustomerService {
+public class CustomerServiceImpl implements CustomerService<Customer> {
 
     private CustomerRepositoryImpl customerRepository;
 
@@ -18,7 +18,7 @@ public class CustomerServiceImpl implements CustomerService {
         this.customerRepository = customerRepository;
     }
 
-    public List<Customer> findAll(Customer custumers) {return null;}
+    public List<Customer> findAll(Customer customers) {return null;}
 
     public List<Customer> findCustomerByLastName(String lastName) {
         List<Customer> foundCustomers = new ArrayList<Customer>();
@@ -54,6 +54,9 @@ public class CustomerServiceImpl implements CustomerService {
 
         return foundCustomers;
     }
+
+    public CustomerRepositoryImpl getCustomerRepository(){return customerRepository; }
 }
+
 
 

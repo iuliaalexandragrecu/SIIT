@@ -12,7 +12,7 @@ import java.util.List;
  * Created by iulia on 5/21/2017.
  */
 
-public class CarRepositoryImpl implements CarRepository{
+public class CarRepositoryImpl implements CarRepository<Car> {
 
     private List<Car> cars = new ArrayList<Car>();
 
@@ -24,15 +24,28 @@ public class CarRepositoryImpl implements CarRepository{
         return null;
     }
 
-    public List<Car> getCarsByModel(String model) {return null;}
+    public List<Car> getCarsByModel(String model) {
+        return null;
+    }
 
-    public List<Car> getCarsByFuelType(FuelType fueltype) {return null;}
+    public List<Car> getCarsByFuelType(FuelType fueltype) {
+        return null;
+    }
 
-    public void add (Car car) {cars.add(car);}
+    public void add(Car car) {
+        cars.add(car);
+    }
 
-    public void addAll(List<Car> cars) {cars.addAll(cars);}
+    public void addAll(List<Car> cars) {
+        cars.addAll(cars);
+    }
 
-    public void delete(Car car) {cars.remove (car);}
+    public void delete(Car car) {
+        cars.remove(car);
+    }
 
-    public void update (Car car) {cars.set(cars.indexOf(car), car);}
+    public void update(Car car) {
+        cars.set(cars.indexOf(car), car);
+
+    }
 }

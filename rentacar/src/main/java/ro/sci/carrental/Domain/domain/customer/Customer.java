@@ -1,5 +1,7 @@
 package ro.sci.carrental.Domain.domain.customer;
 
+import ro.sci.carrental.Domain.domain.Payment.PaymentMethod;
+
 /**
  * Created by iulia on 5/28/2017.
  */
@@ -13,9 +15,7 @@ public class Customer {
     private CustomerAddress customerAddress ;
     private PaymentMethod paymentMethod;
 
-
-    public Customer(int ID, String lastName, String phone) {
-        this.ID = ID;
+    public Customer(String lastName, String phone) {
         this.lastName = lastName;
         this.phone = phone;
     }

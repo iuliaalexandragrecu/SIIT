@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Created by iulia on 5/21/2017.
  */
-public class CarServiceImpl implements CarService {
+public class CarServiceImpl implements CarService<Car> {
 
     private CarRepositoryImpl carRepository;
 
@@ -62,5 +62,5 @@ public class CarServiceImpl implements CarService {
     public CarRepositoryImpl getCarRepository() {
         return carRepository;
     }
-    }
+}
 

@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Created by iulia on 5/29/2017.
  */
-public class CustomerRepositoryImpl implements CustomerRepository {
+public class CustomerRepositoryImpl implements CustomerRepository<Customer> {
 
     private List<Customer> customers = new ArrayList<Customer>();
 
