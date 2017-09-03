@@ -19,7 +19,7 @@ public class Car{
         private VehicleCategory vehicleCategory;
         private boolean onLoan = false;
 
-    public Car(String make, String model, FuelType fuelType) {
+    public Car() {
         this.make = make;
         this.model = model;
         this.fuelType = fuelType;
