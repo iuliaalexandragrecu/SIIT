@@ -2,7 +2,11 @@ package ro.sci.carrental.Domain;
 
 import ro.sci.carrental.Domain.domain.car.Car;
 import ro.sci.carrental.Domain.domain.customer.Customer;
-import ro.sci.carrental.Domain.reader.*;
+import ro.sci.carrental.Domain.domain.dispatcher.CarRentalDispatcher;
+import ro.sci.carrental.Domain.reader.CarConvertor;
+import ro.sci.carrental.Domain.reader.CustomerConverter;
+import ro.sci.carrental.Domain.reader.EntityReader;
+import ro.sci.carrental.Domain.reader.InvalidEntityException;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -56,6 +60,50 @@ public abstract class Main {
         }
     }
 
+    public void executeThreads (final List<Car> carList) throws InterruptedException{
+        final CarRentalDispatcher carRentalDispatcher = new CarRentalDispatcher();
+        final Car randomCar = carList.get(1);
+
+        Thread rentCar1 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    carRentalDispatcher.rentCar(carList, randomCar);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        Thread rentCar2 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    carRentalDispatcher.rentCar(carList, randomCar);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        Thread rentCar3 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    carRentalDispatcher.rentCar(carList, randomCar);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        rentCar1.start();
+        rentCar2.start();
+        rentCar3.start();
+
+        rentCar1.join();
+        rentCar2.join();
+        rentCar3.join();
+    }
+
         /**
         LOGGER.info("Start main");
 
@@ -89,7 +137,7 @@ public abstract class Main {
 
     }*/
 
-    public static void searchCarList(List<Car> carList) {
+    public void searchCarList(List<Car> carList) {
 
         LOGGER.log(Level.INFO, "Lista autoturimelor este:\n");
 
@@ -99,7 +147,7 @@ public abstract class Main {
     }
 
 
-    public static void searchCustomerList(List<Customer> customerList) {
+    public void searchCustomerList(List<Customer> customerList) {
         LOGGER.log(Level.INFO,"Lista clientilor este:\n");
 
         for (Customer customer : customerList) {
@@ -107,6 +155,7 @@ public abstract class Main {
         }
         System.out.println();
     }
-}
+        }
+
 
 
